@@ -1,0 +1,8 @@
+version: '2'
+services:
+  service1:
+    image: serviceimage:develop
+    container_name: servicecontainer
+    build: .
+    ports:
+      - "3000:3000"

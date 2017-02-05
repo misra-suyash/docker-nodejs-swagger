@@ -1,0 +1,9 @@
+version: '2'
+services:
+  service1:
+    volumes:
+      - ./app:/usr/app
+    environment:
+      - NODE_ENV=development
+    command:
+      - dev
