@@ -17,9 +17,8 @@ swaggerTools.initializeMiddleware(swaggerDoc, (middleware) => {
   }));
   app.use(middleware.swaggerUi());
   app.use((err, req, res, next) => {
-    console.log(err);
+    console.log(JSON.stringify(err));
     if (err.failedValidation) {
-      console.log(err.results);
       res.status(400).json({ message: err.message, results: err.results });
     } else {
       res.status(500).json({ message: err.message });
