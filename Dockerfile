@@ -1,4 +1,4 @@
-FROM node:7.4-alpine
+FROM node:8.6-alpine
 RUN mkdir -p /usr
 WORKDIR /usr
 COPY ./package.json /usr
